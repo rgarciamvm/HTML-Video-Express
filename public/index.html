@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script defer src="src/script.js"></script>
+
+    <title>Document</title>
+</head>
+
+<!-- https://www.w3schools.com/html/html_media.asp -->
+<!-- https://ourcodeworld.com/articles/read/148/top-7-best-html5-media-player-javascript-plugins -->
+
+<body>
+    <div class="container">
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#video">video</a></li>
+                <li><a href="#youtube">youtube</a></li>
+                <li><a href="#audio">audio</a></li>
+                <li><a href="#plugin_PDF">plugin PDF</a></li>
+                <li><a href="#plugin_youtube">plugin youtube</a></li>
+                <li><a href="#plugin_video">plugin video</a></li>
+
+            </ul>
+        </nav>
+
+        <!-- <video src="video.mp4" width="640" height="480" poster="descarga.jpeg" type="video/mp4" controls></video>
+    <audio src="audio.mp3"></audio> -->
+
+        <!-- Note: Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed. -->
+
+        <section id="video">
+            <div class="h">
+                <div class="tit_index_video">
+                    <h1>Video de pajarito cantando</h1>
+                    <video width="320" height="240" autoplay muted controls>
+                        <source src="src/movie.mp4" type="video/mp4">
+                        <source src="src/movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                        <track src="src/movies-es.vtt" kind="subtitles" srclang="es" label="Español">
+                        <track src="src/movies-en.vtt" kind="subtitles" srclang="en" label="English">
+                    </video>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="youtube">
+            <h1>Video de youtube</h1>
+            <div class="video-responsive">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/6QpL_ix5RSQ"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+
+        <section id="audio">
+            <h1>Ejemplo de Audio</h1>
+            <div class="audio-responsive">
+                <audio controls autoplay>
+                    <source src="src/Peter-Gabriel_Solsbury_Hill.ogg" type="audio/ogg">
+                    <source src="src/Peter-Gabriel_Solsbury_Hill.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </section>
+
+
+        <!-- https://www.geeksforgeeks.org/html-object-tag/ -->
+        <section id="plugin_PDF">
+            <h1>Ejemplo de plugin PDF</h1>
+            <div class="plugin-responsive">
+                <object type="application/pdf" data="media/sample.pdf" width="600" height="500">
+                </object>
+            </div>
+        </section>
+
+        <section id="plugin_youtube">
+            <h1>Ejemplo de plugin YOUTUBE</h1>
+            <div class="plugin-responsive">
+                <object height="250" width="500" data="https://www.youtube.com/embed/O5hShUO6wxs"></object>
+            </div>
+        </section>
+
+        <section id="plugin_video">
+            <h1>Ejemplo de plugin VIDEO</h1>
+            <div class="plugin-responsive">
+                <object width="300" height="300" data="src/movie.mp4">
+                </object>
+            </div>
+        </section>
+
+
+    </div>
+
+</body>
+
+</html>
